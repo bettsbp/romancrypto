@@ -10,9 +10,9 @@ _Epicodus' assignment to convert normal numbers to roman numerals with attention
 
 ## Rules
 * _The program will take a numerical value less than 4 and multiply it by 'I'._
-* _If there are four I's_
-* _if the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!_
-* _for words beginning with "y", treat "y" as a consonant._
+* _If there are four I's turn into a IV_
+* _If there is a 9, replace with IX_
+* _If there are five of the same character, replace with the corresponding roman numeral_
 
 ## Expected Behaviors
 
@@ -25,6 +25,18 @@ _Epicodus' assignment to convert normal numbers to roman numerals with attention
 | If user inputs an exact roman number (1, 5, 10, 50, 100, 500, 1000), only output corresponding roman numeral | 50 | L |
 | If there are 5 in a row of the same, ie. 5, 50, 500, convert to corresponding roman numberal | XXXXX | L |
 | If there are more than three of the same, convert to one greater, but keep one in the front. | 4 | IV |
+
+|Behavior  |     Input     | Output|
+|:----------:|:-------------:|:------:|
+| Remove spaces | I'm here | I'mhere |
+| Remove punctuation | I'm here  | Imhere|
+| Downcase the input | I'm here| imhere |
+| Count characters | I'm here| 6 |
+| Determine row and column count | 6 | 3x2 |
+| determine new position of each character| |  |
+| Show user coded message| |  |
+
+
 
 ## Setup/Installation Requirements
 
