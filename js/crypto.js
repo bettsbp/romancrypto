@@ -21,18 +21,23 @@ function crypto(message) {
   alert("the secret array is:" + secretArray)
  for (i=0; i < charArray.length; i+=(squareRoot +1)) {
    secretArray.splice(i, 1, charArray[i])
+    alert("this is the secret arrray at the 0i:" + secretArray)
  }
- for (i=1; i < charArray.length; i+=(squareRoot +1)) {
+ for (i=(squareRoot-2); i < charArray.length; i+=(squareRoot +1)) {
    secretArray.splice(i+2, 1, charArray[i])
+   alert("this is the secret arrray at the 1i:" + secretArray)
  }
- for (i=2; i < charArray.length; i+=(squareRoot +1)) {
+ for (i=(squareRoot-1); i < charArray.length; i+=(squareRoot)) {
    secretArray.splice(i+4, 1, charArray[i])
+   alert("this is the secret arrray at the 2i:" + secretArray)
  }
- for (i=3; i < charArray.length; i+=(squareRoot +1)) {
+ for (i=(squareRoot); i < charArray.length; i+=(squareRoot +1)) {
    secretArray.splice(i-2, 1, charArray[i])
+   alert("this is the secret arrray at the 3i:" + secretArray)
  }
- for (i=6; i < charArray.length; i+=(squareRoot*i)) {
+ for (i=(squareRoot*2); i < charArray.length; i+=(squareRoot*i)) {
    secretArray.splice(i-4, 1, charArray[i])
+   alert("this is the current secret arrray:" + secretArray)
  }
   return secretArray
   alert("past the loop")
