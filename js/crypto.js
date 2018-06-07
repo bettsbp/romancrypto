@@ -17,11 +17,23 @@ function crypto(message) {
  for(var i = 0; i < charCount; i++) {
     secretArray.push(" ");
 }
-  secretArray.splice(0, 1, (charArray[0]));
+  // secretArray.splice(0, 1, (charArray[0]));
   alert("the secret array is:" + secretArray)
- for (i=1; i < charArray.length; i++) {
-   secretArray.splice(i, 1, charArray[i+squareRoot])
+ for (i=0; i < charArray.length; i+=(squareRoot +1)) {
+   secretArray.splice(i, 1, charArray[i])
  }
-    return secretArray
- alert("past the loop")
+ for (i=1; i < charArray.length; i+=(squareRoot +1)) {
+   secretArray.splice(i+2, 1, charArray[i])
+ }
+ for (i=2; i < charArray.length; i+=(squareRoot +1)) {
+   secretArray.splice(i+4, 1, charArray[i])
+ }
+ for (i=3; i < charArray.length; i+=(squareRoot +1)) {
+   secretArray.splice(i-2, 1, charArray[i])
+ }
+ for (i=6; i < charArray.length; i+=(squareRoot*i)) {
+   secretArray.splice(i-4, 1, charArray[i])
+ }
+  return secretArray
+  alert("past the loop")
 }
